@@ -1,4 +1,3 @@
-import { terser } from 'rollup-plugin-terser'
 import del from 'rollup-plugin-delete' //
 import { nodeResolve } from '@rollup/plugin-node-resolve' //将外部引入的js打包进来
 import commonjs from '@rollup/plugin-commonjs' //将CommonJS模块转换为ES6, 方便rollup直接调用
@@ -58,18 +57,19 @@ export default async () => ({
             exclude: 'node_modules/**', //排除node_modules下面的所有的代码 只编译自己的代码
         }),
         // 开启服务
-        serve({
-            open: false,
-            verbose: false,
-            host: 'localhost',
-            port: 9004,
-            historyApiFallback: true,
-            contentBase: 'demo',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
-        }),
+        !isProduction &&
+            serve({
+                open: false,
+                verbose: false,
+                host: 'localhost',
+                port: 9004,
+                historyApiFallback: true,
+                contentBase: 'demo',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                },
+            }),
         // 热更新
-        livereload(),
+        !isProduction && livereload(),
     ],
 })
