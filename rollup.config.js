@@ -14,26 +14,26 @@ export default async () => ({
     input: 'src/index.js',
     output: [
         {
-            file: './dist/left-menu.umd.js',
+            file: './dist/index.umd.js',
             format: 'umd',
-            name: 'leftMenu',
+            name: 'index',
             globals: { vue: 'Vue' },
         },
         {
-            file: 'demo/left-menu.umd.js',
-            name: 'leftMenu',
+            file: 'demo/index.umd.js',
+            name: 'index',
             format: 'umd',
             globals: { vue: 'Vue' },
         },
         {
-            file: './dist/left-menu.amd.js',
+            file: './dist/index.amd.js',
             format: 'amd',
-            name: 'leftMenu',
+            name: 'index',
         },
         {
-            file: './dist/left-menu.es.js',
+            file: './dist/index.es.js',
             format: 'es',
-            name: 'leftMenu',
+            name: 'index',
         },
     ],
     watch: {

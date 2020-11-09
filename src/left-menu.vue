@@ -1,5 +1,5 @@
 <template>
-  <div class="left-menu">
+  <div class="index">
     {{messageData}}
     <!-- <el-button @click="handleClick">我是按钮</el-button> -->
   </div>
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'left-menu',
+  name: 'index',
   data() {
     return {
       messageData: '本模版基于rollup打包vue组件的模版，支持热更新,有助于快速开发vue组件库',
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.left-menu {
+.index {
   margin-top: 10%;
   position: relative;
   display: flex;

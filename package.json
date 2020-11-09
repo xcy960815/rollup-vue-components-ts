@@ -1,8 +1,8 @@
 {
   "name": "rollup-vue-components",
   "version": "1.0.0",
-  "description": "测试使用rollup打包vue组件",
-  "main": "index.js",
+  "description": "基于 rollup 打包 vue 组件的组件，支持页面热更新，有助于快速开发vue组件",
+  "main": "dist/index.umd.js",
   "scripts": {
     "dev-daily": "NODE_ENV=development ENV=daily rollup -c -w",
     "dev-pre": "NODE_ENV=development ENV=pre rollup -c -w",

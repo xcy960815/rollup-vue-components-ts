@@ -1,16 +1,9 @@
-import { Button } from 'element-ui'
+// import { Button } from 'element-ui'
+// 开发单组件例子🌰
 import LeftMenu from './left-menu.vue'
-// const components = [LeftMenu]
-// const install = function (Vue) {
-//     components.forEach((component) => {
-//         Vue.component(component.name, component)
-//     })
-// }
-// export default {
-//     install,
-// }
+
 LeftMenu.install = function(Vue) {
-    Vue.use(Button)
+    // Vue.use(Button)
     // Vue.use(Submenu)
     // Vue.use(MenuItem)
     // Vue.use(Icon)
@@ -21,3 +14,14 @@ LeftMenu.install = function(Vue) {
     Vue.component(LeftMenu.name, LeftMenu)
 }
 export default LeftMenu
+
+// 开发多组件例子🌰
+// const components = [LeftMenu]
+// const install = function (Vue) {
+//     components.forEach((component) => {
+//         Vue.component(component.name, component)
+//     })
+// }
+// export default {
+//     install,
+// }

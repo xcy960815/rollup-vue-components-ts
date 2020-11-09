@@ -3,7 +3,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.leftMenu = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.index = factory());
 }(this, (function () { 'use strict';
 
   //
@@ -14,7 +14,7 @@
   //
   //
   var script = {
-    name: 'left-menu',
+    name: 'index',
     data: function data() {
       return {
         messageData: '本模版基于rollup打包vue组件的模版，支持热更新,有助于快速开发vue组件库'
@@ -163,7 +163,7 @@
     var _vm = this;
     var _h = _vm.$createElement;
     var _c = _vm._self._c || _h;
-    return _c("div", { staticClass: "left-menu" }, [
+    return _c("div", { staticClass: "index" }, [
       _vm._v("\n  " + _vm._s(_vm.messageData) + "\n  ")
     ])
   };
@@ -173,11 +173,11 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-6faeb948_0", { source: ".left-menu[data-v-6faeb948] {\n  margin-top: 10%;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["left-menu.vue"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"left-menu.vue","sourcesContent":[".left-menu {\n  margin-top: 10%;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
+      inject("data-v-6c867855_0", { source: ".index[data-v-6c867855] {\n  margin-top: 10%;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n", map: {"version":3,"sources":["left-menu.vue"],"names":[],"mappings":"AAAA;EACE,eAAe;EACf,kBAAkB;EAClB,aAAa;EACb,mBAAmB;EACnB,uBAAuB;AACzB","file":"left-menu.vue","sourcesContent":[".index {\n  margin-top: 10%;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n"]}, media: undefined });
 
     };
     /* scoped */
-    const __vue_scope_id__ = "data-v-6faeb948";
+    const __vue_scope_id__ = "data-v-6c867855";
     /* module identifier */
     const __vue_module_identifier__ = undefined;
     /* functional template */
