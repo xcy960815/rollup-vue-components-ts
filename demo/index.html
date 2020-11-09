@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12" type="text/javascript"></script>
+    <script src="./left-menu.umd.js" type="text/javascript"></script>
+
+    <style>
+        html,
+        body,
+        #app {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+<script>
+    Vue.use(leftMenu)
+
+    new Vue({
+        el: '#app',
+        template: `<div>
+                    <left-menu></left-menu>
+                    </div>`,
+    })
+
+</script>
+
+</html>

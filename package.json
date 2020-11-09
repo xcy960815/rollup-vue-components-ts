@@ -1,0 +1,46 @@
+{
+  "name": "rollup-vue-components",
+  "version": "1.0.0",
+  "description": "测试使用rollup打包vue组件",
+  "main": "index.js",
+  "scripts": {
+    "dev-daily": "NODE_ENV=development ENV=daily rollup -c -w",
+    "dev-pre": "NODE_ENV=development ENV=pre rollup -c -w",
+    "dev-prod": "NODE_ENV=development ENV=prod rollup -c -w",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChongYu-Yease/rollup-vue-components.git"
+  },
+  "author": "xuchongyu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChongYu-Yease/rollup-vue-components/issues"
+  },
+  "homepage": "https://github.com/ChongYu-Yease/rollup-vue-components#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "rollup": "^2.32.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.8"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "element-ui": "^2.14.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-property-decorator": "^9.0.2",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
