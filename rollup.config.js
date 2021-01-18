@@ -6,7 +6,6 @@ import vue from 'rollup-plugin-vue'
 import serve from 'rollup-plugin-serve'
 import postcss from 'rollup-plugin-postcss' // 编译css
 import livereload from 'rollup-plugin-livereload'
-
 const isProduction = process.env.NODE_ENV === 'production'
 
 export default async () => ({
@@ -24,16 +23,16 @@ export default async () => ({
             format: 'umd',
             globals: { vue: 'Vue' },
         },
-        {
-            file: './dist/index.amd.js',
-            format: 'amd',
-            name: 'index',
-        },
-        {
-            file: './dist/index.es.js',
-            format: 'es',
-            name: 'index',
-        },
+        // {
+        //     file: './dist/index.amd.js',
+        //     format: 'amd',
+        //     name: 'index',
+        // },
+        // {
+        //     file: './dist/index.es.js',
+        //     format: 'es',
+        //     name: 'index',
+        // },
     ],
     watch: {
         include: 'src/**/*',
@@ -60,7 +59,6 @@ export default async () => ({
         !isProduction &&
             serve({
                 open: false,
-                verbose: false,
                 host: 'localhost',
                 port: 9004,
                 historyApiFallback: true,

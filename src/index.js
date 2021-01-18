@@ -1,8 +1,8 @@
 // import { Button } from 'element-ui'
 // 开发单组件例子🌰
-import LeftMenu from './left-menu.vue'
+import Examples from './examples.vue'
 
-LeftMenu.install = function(Vue) {
+Examples.install = function(Vue) {
     // Vue.use(Button)
     // Vue.use(Submenu)
     // Vue.use(MenuItem)
@@ -11,9 +11,9 @@ LeftMenu.install = function(Vue) {
     // Vue.use(DropdownMenu)
     // Vue.use(DropdownItem)
     // Vue.use(Tooltip)
-    Vue.component(LeftMenu.name, LeftMenu)
+    Vue.component(Examples.name, Examples)
 }
-export default LeftMenu
+export default Examples
 
 // 开发多组件例子🌰
 // const components = [LeftMenu]
