@@ -23,12 +23,13 @@
 <body>
     <div id="app"></div>
 </body>
-<script>
-    Vue.use(index)
+<script lang="ts">
+
+    Vue.use(demo)
     new Vue({
         el: '#app',
-        template: `<div>
-                    <examples></examples>
+        template: `<div id="app">
+                    <demo></demo>
                     </div>`,
     })
 

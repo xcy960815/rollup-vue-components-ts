@@ -1,5 +1,14 @@
-# rollup-vue-components
+## 基于 rollup+ts+vue2.x 搭建
 
-基于 rollup 打包 vue 组件的组件，支持页面热更新，有助于快速开发 vue 组件
+#### 安装依赖
 
-支持开发多 vue 组件
+```
+npm install
+```
+
+#### 添加文件
+
+1. 在 src 中添加 vue 组件
+2. 在 index.ts 中引入
+
+#### 扩展

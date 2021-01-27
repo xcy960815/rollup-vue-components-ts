@@ -1,164 +1,21 @@
+!function(e,t){e.getElementById("livereloadscript")||((t=e.createElement("script")).async=1,t.src="//"+(window.location.host||"localhost").split(":")[0]+":35729/livereload.js?snipver=1",t.id="livereloadscript",e.getElementsByTagName("head")[0].appendChild(t))}(window.document),function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t(require("vue")):"function"==typeof define&&define.amd?define(["vue"],t):(e="undefined"!=typeof globalThis?globalThis:e||self).demo=t(e.Vue)}(this,(function(e){"use strict";function t(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}var n=t(e),o=function(e,t){return(o=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])})(e,t)};
+/*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.index = factory());
-}(this, (function () { 'use strict';
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
 
-  //
-  //
-  //
-  //
-  var script = {
-    name: 'examples',
-    data: function data() {
-      return {};
-    },
-    mounted: function mounted() {},
-    methods: {}
-  };
-
-  function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
-      if (typeof shadowMode !== 'boolean') {
-          createInjectorSSR = createInjector;
-          createInjector = shadowMode;
-          shadowMode = false;
-      }
-      // Vue.extend constructor export interop.
-      const options = typeof script === 'function' ? script.options : script;
-      // render functions
-      if (template && template.render) {
-          options.render = template.render;
-          options.staticRenderFns = template.staticRenderFns;
-          options._compiled = true;
-          // functional template
-          if (isFunctionalTemplate) {
-              options.functional = true;
-          }
-      }
-      // scopedId
-      if (scopeId) {
-          options._scopeId = scopeId;
-      }
-      let hook;
-      if (moduleIdentifier) {
-          // server build
-          hook = function (context) {
-              // 2.3 injection
-              context =
-                  context || // cached call
-                      (this.$vnode && this.$vnode.ssrContext) || // stateful
-                      (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
-              // 2.2 with runInNewContext: true
-              if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-                  context = __VUE_SSR_CONTEXT__;
-              }
-              // inject component styles
-              if (style) {
-                  style.call(this, createInjectorSSR(context));
-              }
-              // register component module identifier for async chunk inference
-              if (context && context._registeredComponents) {
-                  context._registeredComponents.add(moduleIdentifier);
-              }
-          };
-          // used by ssr in case component is cached and beforeCreate
-          // never gets called
-          options._ssrRegister = hook;
-      }
-      else if (style) {
-          hook = shadowMode
-              ? function (context) {
-                  style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
-              }
-              : function (context) {
-                  style.call(this, createInjector(context));
-              };
-      }
-      if (hook) {
-          if (options.functional) {
-              // register for functional component in vue file
-              const originalRender = options.render;
-              options.render = function renderWithStyleInjection(h, context) {
-                  hook.call(context);
-                  return originalRender(h, context);
-              };
-          }
-          else {
-              // inject component registration as beforeCreate hook
-              const existing = options.beforeCreate;
-              options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-          }
-      }
-      return script;
-  }
-
-  /* script */
-  const __vue_script__ = script;
-
-  /* template */
-  var __vue_render__ = function() {
-    var _vm = this;
-    var _h = _vm.$createElement;
-    var _c = _vm._self._c || _h;
-    return _c("div", [_vm._v("examples")])
-  };
-  var __vue_staticRenderFns__ = [];
-  __vue_render__._withStripped = true;
-
-    /* style */
-    const __vue_inject_styles__ = undefined;
-    /* scoped */
-    const __vue_scope_id__ = "data-v-0aa5917c";
-    /* module identifier */
-    const __vue_module_identifier__ = undefined;
-    /* functional template */
-    const __vue_is_functional_template__ = false;
-    /* style inject */
-    
-    /* style inject SSR */
-    
-    /* style inject shadow dom */
-    
-
-    
-    const __vue_component__ = /*#__PURE__*/normalizeComponent(
-      { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
-      __vue_inject_styles__,
-      __vue_script__,
-      __vue_scope_id__,
-      __vue_is_functional_template__,
-      __vue_module_identifier__,
-      false,
-      undefined,
-      undefined,
-      undefined
-    );
-
-  // import { Button } from 'element-ui'
-
-  __vue_component__.install = function (Vue) {
-    // Vue.use(Button)
-    // Vue.use(Submenu)
-    // Vue.use(MenuItem)
-    // Vue.use(Icon)
-    // Vue.use(Dropdown)
-    // Vue.use(DropdownMenu)
-    // Vue.use(DropdownItem)
-    // Vue.use(Tooltip)
-    Vue.component(__vue_component__.name, __vue_component__);
-  };
-  // const components = [LeftMenu]
-  // const install = function (Vue) {
-  //     components.forEach((component) => {
-  //         Vue.component(component.name, component)
-  //     })
-  // }
-  // export default {
-  //     install,
-  // }
-
-  return __vue_component__;
-
-})));
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+/**
+      * vue-class-component v7.2.6
+      * (c) 2015-present Evan You
+      * @license MIT
+      */
+function r(e){return(r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function i(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function a(e){return function(e){if(Array.isArray(e)){for(var t=0,n=new Array(e.length);t<e.length;t++)n[t]=e[t];return n}}(e)||function(e){if(Symbol.iterator in Object(e)||"[object Arguments]"===Object.prototype.toString.call(e))return Array.from(e)}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance")}()}function c(){return"undefined"!=typeof Reflect&&Reflect.defineMetadata&&Reflect.getOwnMetadataKeys}function s(e,t){f(e,t),Object.getOwnPropertyNames(t.prototype).forEach((function(n){f(e.prototype,t.prototype,n)})),Object.getOwnPropertyNames(t).forEach((function(n){f(e,t,n)}))}function f(e,t,n){(n?Reflect.getOwnMetadataKeys(t,n):Reflect.getOwnMetadataKeys(t)).forEach((function(o){var r=n?Reflect.getOwnMetadata(o,t,n):Reflect.getOwnMetadata(o,t);n?Reflect.defineMetadata(o,r,e,n):Reflect.defineMetadata(o,r,e)}))}var u={__proto__:[]}instanceof Array;function d(e,t){var n=t.prototype._init;t.prototype._init=function(){var t=this,n=Object.getOwnPropertyNames(e);if(e.$options.props)for(var o in e.$options.props)e.hasOwnProperty(o)||n.push(o);n.forEach((function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){e[n]=t},configurable:!0})}))};var o=new t;t.prototype._init=n;var r={};return Object.keys(o).forEach((function(e){void 0!==o[e]&&(r[e]=o[e])})),r}var p=["data","beforeCreate","created","beforeMount","mounted","beforeDestroy","destroyed","beforeUpdate","updated","activated","deactivated","render","errorCaptured","serverPrefetch"];function l(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};t.name=t.name||e._componentTag||e.name;var o=e.prototype;Object.getOwnPropertyNames(o).forEach((function(e){if("constructor"!==e)if(p.indexOf(e)>-1)t[e]=o[e];else{var n=Object.getOwnPropertyDescriptor(o,e);void 0!==n.value?"function"==typeof n.value?(t.methods||(t.methods={}))[e]=n.value:(t.mixins||(t.mixins=[])).push({data:function(){return i({},e,n.value)}}):(n.get||n.set)&&((t.computed||(t.computed={}))[e]={get:n.get,set:n.set})}})),(t.mixins||(t.mixins=[])).push({data:function(){return d(this,e)}});var r=e.__decorators__;r&&(r.forEach((function(e){return e(t)})),delete e.__decorators__);var a=Object.getPrototypeOf(e.prototype),f=a instanceof n.default?a.constructor:n.default,u=f.extend(t);return y(u,e,f),c()&&s(u,e),u}var m={prototype:!0,arguments:!0,callee:!0,caller:!0};function y(e,t,n){Object.getOwnPropertyNames(t).forEach((function(o){if(!m[o]){var i=Object.getOwnPropertyDescriptor(e,o);if(!i||i.configurable){var a,c,s=Object.getOwnPropertyDescriptor(t,o);if(!u){if("cid"===o)return;var f=Object.getOwnPropertyDescriptor(n,o);if(a=s.value,c=r(a),null!=a&&("object"===c||"function"===c)&&f&&f.value===s.value)return}Object.defineProperty(e,o,s)}}}))}function v(e){return"function"==typeof e?l(e):function(t){return l(t,e)}}v.registerHooks=function(e){p.push.apply(p,a(e))};var h=function(e){function t(){var t=null!==e&&e.apply(this,arguments)||this;return t.message="demo",t}return function(e,t){function n(){this.constructor=e}o(e,t),e.prototype=null===t?Object.create(t):(n.prototype=t.prototype,new n)}(t,e),t=function(e,t,n,o){var r,i=arguments.length,a=i<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,n):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(e,t,n,o);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(a=(i<3?r(a):i>3?r(t,n,a):r(t,n))||a);return i>3&&a&&Object.defineProperty(t,n,a),a}([v({name:"demo"})],t)}(n.default);function g(e,t,n,o,r,i,a,c,s,f){"boolean"!=typeof a&&(s=c,c=a,a=!1);var u,d="function"==typeof n?n.options:n;if(e&&e.render&&(d.render=e.render,d.staticRenderFns=e.staticRenderFns,d._compiled=!0,r&&(d.functional=!0)),o&&(d._scopeId=o),i?(u=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),t&&t.call(this,s(e)),e&&e._registeredComponents&&e._registeredComponents.add(i)},d._ssrRegister=u):t&&(u=a?function(e){t.call(this,f(e,this.$root.$options.shadowRoot))}:function(e){t.call(this,c(e))}),u)if(d.functional){var p=d.render;d.render=function(e,t){return u.call(t),p(e,t)}}else{var l=d.beforeCreate;d.beforeCreate=l?[].concat(l,u):[u]}return n}var b,_="undefined"!=typeof navigator&&/msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());function O(e){return function(e,t){return function(e,t){var n=_?t.media||"default":e,o=w[n]||(w[n]={ids:new Set,styles:[]});if(!o.ids.has(e)){o.ids.add(e);var r=t.source;if(t.map&&(r+="\n/*# sourceURL="+t.map.sources[0]+" */",r+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(t.map))))+" */"),o.element||(o.element=document.createElement("style"),o.element.type="text/css",t.media&&o.element.setAttribute("media",t.media),void 0===b&&(b=document.head||document.getElementsByTagName("head")[0]),b.appendChild(o.element)),"styleSheet"in o.element)o.styles.push(r),o.element.styleSheet.cssText=o.styles.filter(Boolean).join("\n");else{var i=o.ids.size-1,a=document.createTextNode(r),c=o.element.childNodes;c[i]&&o.element.removeChild(c[i]),c.length?o.element.insertBefore(a,c[i]):o.element.appendChild(a)}}}(e,t)}}var w={};var A=h,j=function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{staticClass:"demo"},[e._v("\n  "+e._s(e.txt)+"\n")])};j._withStripped=!0;var C=[g({render:j,staticRenderFns:[]},(function(e){e&&e("data-v-32a88bf6_0",{source:".demo[data-v-32a88bf6] {\n  position: relative;\n  color: red;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */",map:{version:3,sources:["/Users/opera/Documents/npm/rollup-vue-components-ts/src/demo.vue","demo.vue"],names:[],mappings:"AAkBA;EACA,kBAAA;EACA,UAAA;EACA,eAAA;ACjBA;;AAEA,mCAAmC",file:"demo.vue",sourcesContent:["<template>\n  <div class=\"demo\">\n    {{ txt }}\n  </div>\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator'\n\n@Component({\n  name: 'demo',\n})\nexport default class Demo extends Vue {\n  message: string = 'demo'\n}\n<\/script>\n\n<style lang=\"scss\" scoped>\n.demo {\n  position: relative;\n  color: red;\n  font-size: 20px;\n}\n</style>\n",".demo {\n  position: relative;\n  color: red;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */"]},media:void 0})}),A,"data-v-32a88bf6",false,undefined,!1,O,void 0,void 0)],E=function(e){E.installed||(E.installed=!0,C.forEach((function(t){e.component(t.extendOptions.name,t)})))};return"undefined"!=typeof window&&window.Vue&&E(window.Vue),{install:E}}));
