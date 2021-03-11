@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "一个打包vue-ts 组件的rollup模版，内置rollup热更新，server服务",
     "main": "dist/index.umd.js",
-    "module": "dist/index.umd.js",
+    "module": "dist/index.esm.js",
     "scripts": {
         "dev": "NODE_ENV=development ENV=daily rollup -c -w",
         "build": "NODE_ENV=production ENV=prod  rollup -c",
@@ -23,7 +23,7 @@
         "type": "git",
         "url": "git+https://github.com/ChongYu-Yease/rollup-vue-components-ts.git"
     },
-    "types": "./dist/demo.vue.d.ts",
+    "types": "./dist/typing/demo.vue.d.ts",
     "author": "崇玉",
     "license": "MIT",
     "devDependencies": {
