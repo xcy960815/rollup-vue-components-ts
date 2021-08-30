@@ -2,9 +2,9 @@ import demo from './demo.vue'
 
 const components = [demo]
 
-const install = (Vue) => {
+const install = async (Vue) => {
     if ((install as any).installed) return
-    ;(install as any).installed = true
+    await ((install as any).installed = true)
     components.forEach((component: any) => {
         Vue.component(component.extendOptions.name, component)
     })

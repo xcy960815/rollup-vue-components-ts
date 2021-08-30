@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('vue')) :
     typeof define === 'function' && define.amd ? define(['vue'], factory) :
@@ -479,7 +479,10 @@
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
-      return _c("div", { staticClass: "demo" }, [_vm._v(_vm._s(_vm.message))])
+      return _c("div", { staticClass: "demo" }, [
+        _vm._v("\n  " + _vm._s(_vm.message) + "\n  "),
+        _c("div", { staticClass: "demo" }, [_vm._v(_vm._s(_vm.message))])
+      ])
     };
     var __vue_staticRenderFns__ = [];
     __vue_render__._withStripped = true;
@@ -487,11 +490,11 @@
       /* style */
       var __vue_inject_styles__ = function (inject) {
         if (!inject) { return }
-        inject("data-v-21c09ea8_0", { source: ".demo[data-v-21c09ea8] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */", map: {"version":3,"sources":["/Users/opera/Documents/npm/rollup-vue-components-ts/src/demo.vue","demo.vue"],"names":[],"mappings":"AAkBA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,qBAAA;EACA,eAAA;ACjBA;;AAEA,mCAAmC","file":"demo.vue","sourcesContent":["<template>\n  <div class=\"demo\">{{ message }}</div>\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator'\n\n@Component({\n  name: 'demo',\n})\nexport default class Demo extends Vue {\n  // 防止在ts-vue 使用use 方法出错\n  static install(vue: typeof Vue): void {}\n  message: string = 'vue+ts+rollup'\n}\n</script>\n\n<style lang=\"scss\" scoped>\n.demo {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n</style>\n",".demo {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */"]}, media: undefined });
+        inject("data-v-6eddc3a4_0", { source: ".demo[data-v-6eddc3a4] {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */", map: {"version":3,"sources":["/Users/opera/Documents/npm/rollup-vue-components-ts/src/demo.vue","demo.vue"],"names":[],"mappings":"AAqBA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,qBAAA;EACA,eAAA;ACpBA;;AAEA,mCAAmC","file":"demo.vue","sourcesContent":["<template>\n  <div class=\"demo\">\n    {{ message }}\n    <div class=\"demo\">{{ message }}</div>\n  </div>\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator'\n\n@Component({\n  name: 'demo',\n})\nexport default class Demo extends Vue {\n  // 防止在ts-vue 使用use 方法出错\n  static install(vue: typeof Vue): void {}\n  message: string = 'vue+ts+rollup'\n}\n</script>\n\n<style lang=\"scss\" scoped>\n.demo {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n</style>\n",".demo {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  font-size: 20px;\n}\n\n/*# sourceMappingURL=demo.vue.map */"]}, media: undefined });
 
       };
       /* scoped */
-      var __vue_scope_id__ = "data-v-21c09ea8";
+      var __vue_scope_id__ = "data-v-6eddc3a4";
       /* module identifier */
       var __vue_module_identifier__ = undefined;
       /* functional template */

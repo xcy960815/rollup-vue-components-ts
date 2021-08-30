@@ -81,7 +81,7 @@ export default async () => ({
             serve({
                 open: false,
                 host: 'h5.dev.weidian.com',
-                port: 9898,
+                port: 7898,
                 historyApiFallback: true,
                 contentBase: 'demo',
                 headers: {

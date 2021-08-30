@@ -1,5 +1,8 @@
 <template>
-  <div class="demo">{{ message }}</div>
+  <div class="demo">
+    {{ message }}
+    <div class="demo">{{ message }}</div>
+  </div>
 </template>
 
 <script lang="ts">
