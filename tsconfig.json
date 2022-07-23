@@ -3,21 +3,24 @@
     "target": "es5",
     "module": "es2015",
     "declaration": true,
-    "declarationDir": "./dist/typing",
-    "outDir": "./dist/",
+    "declarationDir": "./temp",
+    "outDir": "./",
     "strict": true,
     "sourceMap": false,
     "noImplicitAny": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    // "experimentalDecorators": true,
     "experimentalDecorators": true,
     "lib": [
       "es6",
       "dom"
-    ]
+    ],
+    "jsx": "preserve"
   },
-  "exclude": [
-    "dist"
+  "files": [
+    "src/index.ts",
+    "src/rollup-vue-components-ts.vue"
   ]
 }

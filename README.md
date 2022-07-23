@@ -1,17 +1,20 @@
 ## 基于 rollup+ts+vue2.x 搭建
 
+
 #### 安装依赖
-
+```npm
+npm i
 ```
-npm install
+#### 启动模板插件
+```npm
+npm run dev
+```
+#### 全局link
+```npm
+npm run link
 ```
 
-#### 添加文件
-
-1. 在 src 中添加 vue 组件
-2. 在 index.ts 中引入
-
-#### 扩展
-
-1. 目前在开发环境已经引入热更新、server 组件 在编译开发的时候实时支持热更新
-2. 开发环境编译的代码不压缩、发布到 npm 上的代码压缩
+#### 启动测试模板
+```npm
+npm run serve
+```

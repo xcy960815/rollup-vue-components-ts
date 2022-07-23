@@ -1,19 +1,13 @@
-import demo from './demo.vue'
-
-const components = [demo]
-
-const install = async (Vue) => {
-    if ((install as any).installed) return
-    await ((install as any).installed = true)
-    components.forEach((component: any) => {
-        Vue.component(component.extendOptions.name, component)
-    })
+// @ts-ignore
+import rollupVueComponentsTs from './rollup-vue-components-ts.vue'
+// import {Vue as _Vue} from "vue-property-decorator"
+const install = (Vue) => {
+    Vue.component(rollupVueComponentsTs.name, rollupVueComponentsTs)
 }
 
-if (typeof window !== 'undefined' && (window as any).Vue) {
-    install((window as any).Vue)
+export {
+    rollupVueComponentsTs
 }
-
 export default {
     install,
 }
